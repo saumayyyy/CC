@@ -5,17 +5,11 @@ int main(){
     int t;
     cin>>t;
     while(t--){
-        int n,k,x;
+        long long n,k,x;
 
         cin>>n>>k>>x;
-
-        if(k==1 && x>=1){
-            cout<<"Yes"<<endl;
-            continue;
-        }
-        long long sum = pow(2ll,k-1);
         
-        if(x>=sum){
+        if(x>=pow(2ll,k-1)){
             cout<<"Yes"<<endl;
         }
         else{
