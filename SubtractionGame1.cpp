@@ -26,13 +26,9 @@ int main(){
         for(int i = 0;i<n;i++){
             cin>>arr[i];
         }
-        ll ans = LLONG_MAX;
-        for(int i = 0;i<n;i++){
-            for(int j = i;j<n;j++){
-                if(arr[i]!=arr[j]){
-                    ans = min(ans,gcd(arr[i],arr[j]));
-                } 
-            }
+        ll ans = arr[0];
+        for(int i = 1;i<n;i++){
+            ans = gcd(arr[i],ans);
         }
         cout<<ans<<endl;
     }
