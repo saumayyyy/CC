@@ -14,10 +14,9 @@ int main(){
             cout<<k<<endl;
         }
         else{
-            while(k<=x){
-                double cost = (100 - k*d)/100.0;
-                int remaining = ceil(x * cost);
-
+            while(k<=101){
+                int val = min(k*d,100);
+                double remaining = x * (100-val)/100.0;
                 if(y-k>=remaining){
                     cout<<k<<endl;
                     flag = true;
