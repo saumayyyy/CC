@@ -2,22 +2,18 @@
 using namespace std;
 
 typedef long long ll;
-ll numberOf5s(int n){
-    ll cnt = 0;
-    while(n%5==0){
-        n = n/5;
-        cnt++;
-    }
-    return cnt;
+void numberOf5s(int n,ll &cnt){
+        for(int i = 5;i<=n;i*=5){
+            cnt += n/i;
+        }
+    
 }
 
 int main(){
     int n;
     cin>>n;
     ll cnt = 0;
-    for(int i = 1;i<=n;i++){
-        cnt+=numberOf5s(i);
-    }
+    numberOf5s(n,cnt);
     cout<<cnt<<endl;
     return 0;
 }
