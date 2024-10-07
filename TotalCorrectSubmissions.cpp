@@ -8,12 +8,13 @@ int main(){
     while(t--){
         int n;
         cin>>n;
-        unordered_map<string,ll>mpp;
-        for(ll i = 0;i<3*n;i++){
-            string s;
-            int a;
-            cin>>s>>a;
-            mpp[s]+=a;
+        map<string,int>mpp;
+        for(int i =  0;i<3*n;i++){
+            string key;
+            cin>>key;
+            int num;
+            cin>>num;
+            mpp[key]+=num;
         }
         vector<int>ans;
         for(auto it : mpp){
@@ -24,6 +25,7 @@ int main(){
             cout<<ans[i]<<" ";
         }
         cout<<endl;
+        
         
     }
     return 0;
